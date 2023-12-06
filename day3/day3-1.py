@@ -40,7 +40,6 @@ def check_for_symbol(arr, row, col):
 
 
 def calculate(array):
-    ''' do stuff'''
     valid_nums = defaultdict(list)
     for row in range(array.shape[0]):
         curr_num = ''

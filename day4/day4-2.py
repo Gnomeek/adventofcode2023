@@ -8,6 +8,7 @@ def solver(winnings, picks):
             cnt += 1
     return cnt
 
+
 def main():
     lines = read_input()
     card_dict = {i: 1 for i, _ in enumerate(lines, start=1)}

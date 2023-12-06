@@ -10,6 +10,8 @@ spelled_digits = {
     "eight": "8",
     "nine": "9",
 }
+
+
 def solver(line: str) -> int:
     tmp, line = "", unify_str(line)
     for i in line:
@@ -22,11 +24,13 @@ def solver(line: str) -> int:
             break
     return int(tmp)
 
+
 def unify_str(line: str) -> str:
     for spelled, digit in spelled_digits.items():
-        line = line.replace(spelled, spelled+digit+spelled)
+        line = line.replace(spelled, spelled + digit + spelled)
 
     return line
+
 
 def main():
     res = 0
@@ -34,6 +38,7 @@ def main():
         for l in f:
             res += solver(l)
     print(res)
+
 
 if __name__ == '__main__':
     main()

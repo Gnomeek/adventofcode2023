@@ -5,7 +5,6 @@ from pprint import pprint
 
 
 def read_file(path):
-    ''' read files line by line'''
     with open(path, 'r') as file:
         lines = [line.strip() for line in file.readlines()]
     return lines
@@ -41,7 +40,6 @@ def check_for_symbol(arr, row, col):
 
 
 def calculate(array):
-    ''' do stuff'''
     valid_nums = defaultdict(list)
     valid_nums2 = {'valid': defaultdict(list), 'invalid': defaultdict}
     for row in range(array.shape[0]):
@@ -87,10 +85,6 @@ def calculate(array):
                 else:
                     VALID = False
                     curr_num = ''
-
-    # pprint(valid_nums)
-    # pprint(valid_nums2)
-
     return sum(np.product(vals) for vals in valid_nums2['valid'].values() if len(vals) == 2)
 
 

@@ -4,6 +4,7 @@ from day2 import read_input
 
 RED, GREEN, BLUE = 12, 13, 14
 
+
 def solver(picks: List[Dict[str, int]]):
     if any([i.get("red", 0) > RED for i in picks]):
         return False
@@ -12,6 +13,7 @@ def solver(picks: List[Dict[str, int]]):
     if any([i.get("blue", 0) > BLUE for i in picks]):
         return False
     return True
+
 
 def main():
     result = 0
